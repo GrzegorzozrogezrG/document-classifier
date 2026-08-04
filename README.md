@@ -1,24 +1,24 @@
-# Klasyfikator dokumentów (Streamlit + AI + PyCaret)
+# Document Classifier (Streamlit + AI + PyCaret)
 
-Aplikacja porządkuje dokumenty na podstawie ich treści. Użytkownik przesyła obrazy
-lub pliki PDF, model AI rozpoznaje ich typ i opisuje zawartość, a następnie
-PyCaret grupuje podobne materiały. Wyniki można ręcznie poprawić i pobrać jako
-archiwum `.7z` z osobnym katalogiem dla każdej grupy.
+This application organizes documents based on their content. Users upload images
+or PDF files, an AI model identifies their type and describes their content, and
+PyCaret groups similar materials. Users can manually adjust the results and
+download them as a `.7z` archive with a separate directory for each group.
 
-## Cel projektu
+## Project Goal
 
-Projekt ma skrócić czas potrzebny na ręczne przeglądanie i segregowanie większej
-liczby dokumentów. Pierwsza wersja produktu obejmuje pełny przepływ:
+The project aims to reduce the time required to manually review and sort large
+collections of documents. The first product version covers the complete workflow:
 
-1. przesłanie dokumentów,
-2. analizę treści przez Gemini lub OpenAI,
-3. automatyczne grupowanie podobnych plików,
-4. ręczną korektę przypisanych grup,
-5. eksport uporządkowanych dokumentów.
+1. Upload documents.
+2. Analyze their content with Gemini or OpenAI.
+3. Automatically group similar files.
+4. Manually adjust the assigned groups.
+5. Export the organized documents.
 
 ## Features
 
-- Klasyfikacja obrazów i dokumentów PDF przy użyciu Gemini lub OpenAI
+- Image and PDF document classification using Gemini or OpenAI
 - Metadata table in Pandas / Streamlit
 - Similarity grouping with PyCaret (KMeans clustering)
 - Manual group override by user
@@ -47,8 +47,8 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-4. W panelu bocznym wklej klucz API Gemini lub OpenAI. Kluczy i innych sekretów
-   nie zapisuj w repozytorium.
+4. Paste your Gemini or OpenAI API key into the sidebar. Do not store API keys
+   or other secrets in the repository.
 
 ## Notes
 
@@ -75,6 +75,6 @@ streamlit run app.py
 
 - Add automated tests for provider detection, document analysis fallback paths, clustering output, and archive export.
 - Add CI checks (lint + basic smoke test) to validate that the app starts and core imports work.
-## Project status
+## Project Status
 
 Development work is tracked on feature branches and reviewed through pull requests.

@@ -16,6 +16,43 @@ collections of documents. The first product version covers the complete workflow
 4. Manually adjust the assigned groups.
 5. Export the organized documents.
 
+## MVP Scope
+
+The MVP is intended for users who need to organize a small or medium-sized batch
+of mixed business documents without building classification rules manually.
+
+### Included
+
+- Upload PNG, JPG, JPEG, WebP, BMP, TIFF, and PDF files.
+- Analyze documents with a user-provided Gemini or OpenAI API key.
+- Return a document type, content description, tags, and suggested group.
+- Group similar documents automatically with KMeans clustering.
+- Display analysis results in an editable table.
+- Allow users to correct group assignments before export.
+- Export selected documents to a `.7z` archive organized by group.
+- Show actionable errors for invalid files, API failures, and malformed AI responses.
+
+### Not Included
+
+- User accounts, roles, or shared workspaces.
+- Permanent document storage or document-history management.
+- Training custom classification models.
+- OCR or classification guarantees for handwritten or low-quality documents.
+- Automatic processing from email, cloud drives, or external systems.
+- Production-scale batch processing and background job queues.
+
+## Success Criteria
+
+The MVP is successful when all of the following conditions are met:
+
+- A user can complete the upload-to-export workflow without editing source code.
+- At least 90% of supported, valid test files are processed without an application error.
+- Every successfully analyzed document receives all required metadata fields.
+- Users can review and change every automatically assigned group.
+- The exported archive contains every selected file exactly once in its chosen group.
+- Invalid files and external API failures produce clear, actionable messages.
+- A representative batch of 20 documents can be processed and exported in one session.
+
 ## Features
 
 - Image and PDF document classification using Gemini or OpenAI
